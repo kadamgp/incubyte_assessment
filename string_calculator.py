@@ -7,8 +7,15 @@ def add_number_string(num_string):
     if(len(num_string)==1):
         return int(num_string)
 
-    # handling new line between the number string
-    num_string=num_string.replace('\n',',')
+    # when there are // then custom delimiter is used
+    delimiter='\n'  # default delimiter is '\n'( for handling new lines )
+    if(num_string.startswith("//")):
+        two_parts=num_string.split("\n",1)  # spliting into two parts on first new line
+        delimiter=two_parts[0][2:]
+        num_string=two_parts[1]
+
+    # replacing any delimiter with ','
+    num_string=num_string.replace(delimiter,',')   
 
     # delimiter here is ','
     # for string with more than one number

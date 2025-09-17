@@ -14,5 +14,8 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add("1,2\n3"),6) # test case 1 - new line inside string
         self.assertEqual(add("1,2\n\n3"),6)    # test case 2 - multiple new lines inside string
 
+    def test_different_delimiters(self):
+        self.assertEqual(add("//$\n1$2$3"),6) # test case 1 - changing delimiter( single character delimiter)
+
 if __name__ == "__main__":
     unittest.main()
