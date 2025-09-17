@@ -8,6 +8,7 @@ class TestStringCalculator(unittest.TestCase):
          # for simplicity delimiter used for these cases is only ','.
         self.assertEqual(add("3,4"),7)  # test case 3 - takes two number string, returns addition of it
         self.assertEqual(add("1,2,3"),6)    # test case 4 - takes three numbers string, returns addition of it
+        self.assertEqual(add("1,2,3,4,5,6,7,8,9"),45) # testing with any number of numbers present in string
 
 
 if __name__ == "__main__":
