@@ -7,6 +7,9 @@ def add_number_string(num_string):
     if(len(num_string)==1):
         return int(num_string)
 
+    # handling new line between the number string
+    num_string=num_string.replace('\n',',')
+
     # delimiter here is ','
     # for string with more than one number
     number_list=list(map(int,num_string.split(',')))

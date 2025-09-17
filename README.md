@@ -16,3 +16,5 @@ String Calculator with method signature:    int add(string numbers)
 2. string with one number as input.
 3. string with two numbers as input.
 4. string with three numbers as input.
+5. testing with any number of numbers in string.
+6. handling new lines between number string.
