@@ -15,7 +15,12 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add("1,2\n\n3"),6)    # test case 2 - multiple new lines inside string
 
     def test_different_delimiters(self):
-        self.assertEqual(add("//$\n1$2$3"),6) # test case 1 - changing delimiter( single character delimiter)
+        self.assertEqual(add("//$#\n1$#2$#3"),6) # test case 1 - changing delimiter( single character delimiter)
+        self.assertEqual(add("//;#\n5;#4;#2"),11)   # testing with multiple characters, different delimiter
+    
+    def test_negative_number(self):
+        with self.assertRaises(Exception) as contex:    # test case 1 - throw exception for single negative number
+            add("1,-2,10") 
 
 if __name__ == "__main__":
     unittest.main()

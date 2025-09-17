@@ -19,3 +19,4 @@ String Calculator with method signature:    int add(string numbers)
 5. testing with any number of numbers in string.
 6. handling new lines between number string.
 7. supporting different delimiters.
+8. throwing exception for single negative number.
