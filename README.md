@@ -4,8 +4,7 @@ This repository is for submission of assessement.
 ## Folder Structure
 -incubyte_assessment/   
 ├── string_calculator.py        -source code file   
-├── test_string_calculator.py   -unit test file for string_calculator.py   
-└── screenshots/                -screenshots of output   
+└── test_string_calculator.py   -unit test file for string_calculator.py     
 
 ## Problem Statement
 String Calculator with method signature:    int add(string numbers)
@@ -21,3 +20,7 @@ String Calculator with method signature:    int add(string numbers)
 7. supporting different delimiters.
 8. throwing exception for single negative number.
 9. throw exception for multiple negative numbers and exception message should include negative numbers.
+
+## Compilation and Execution
+
+python3 test_string_calculator.py
