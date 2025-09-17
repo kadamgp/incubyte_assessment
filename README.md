@@ -10,6 +10,7 @@ This repository is for submission of assessement.
 ## Problem Statement
 String Calculator with method signature:    int add(string numbers)
 
-## Solution
+## Solution with test cases
 
-1. step 1: simple string calculator with empty string.
+1. simple string calculator with empty string.
+2. string with one number as input.
