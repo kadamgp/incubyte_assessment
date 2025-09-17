@@ -14,4 +14,5 @@ String Calculator with method signature:    int add(string numbers)
 
 1. simple string calculator with empty string.
 2. string with one number as input.
-3. string with two number as input.
+3. string with two numbers as input.
+4. string with three numbers as input.
