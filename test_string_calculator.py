@@ -12,6 +12,7 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_new_lines(self):
         self.assertEqual(add("1,2\n3"),6) # test case 1 - new line inside string
+        self.assertEqual(add("1,2\n\n3"),6)    # test case 2 - multiple new lines inside string
 
 if __name__ == "__main__":
     unittest.main()

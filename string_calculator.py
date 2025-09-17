@@ -12,6 +12,11 @@ def add_number_string(num_string):
 
     # delimiter here is ','
     # for string with more than one number
-    number_list=list(map(int,num_string.split(',')))
+ 
+    number_list = []
+    for n in num_string.split(','):
+        if n.strip() != '':          # ignoring empty strings (if there are multiple new lines then empty strings may occur)
+            number_list.append(int(n))
+
     return sum(number_list)
     
