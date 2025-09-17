@@ -19,8 +19,13 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add("//;#\n5;#4;#2"),11)   # testing with multiple characters, different delimiter
     
     def test_negative_number(self):
-        with self.assertRaises(Exception) as contex:    # test case 1 - throw exception for single negative number
-            add("1,-2,10") 
+        with self.assertRaises(Exception):    # test case 1 - throw exception for single negative number
+            add("1,-2,5")
+        
+        with self.assertRaises(Exception) as exception_obj: # test case 2 - throw exception along with list of negative numbers
+            add("1,-3,-4,5")
+
+        self.assertIn("negative numbers not allowed <-3,-4>",str(exception_obj.exception))
 
 if __name__ == "__main__":
     unittest.main()

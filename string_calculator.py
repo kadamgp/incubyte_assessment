@@ -21,11 +21,14 @@ def add_number_string(num_string):
     # for string with more than one number
  
     number_list = []
+    negative_numbers=[]
     for n in num_string.split(','):
         if n.strip() != '':          # ignoring empty strings (if there are multiple new lines then empty strings may occur)
             number_list.append(int(n))
             if int(n) < 0 :
-                raise Exception("negative numbers not allowed <" + int(n) + ">")
+                negative_numbers.append(int(n))
+    if negative_numbers:
+        raise Exception("negative numbers not allowed <" + ",".join(map(str,negative_numbers)) + ">")
 
     return sum(number_list)
     
